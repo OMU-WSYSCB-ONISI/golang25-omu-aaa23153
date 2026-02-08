@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodGourmet</title>
+    <style>
+        h1{font-size:20;}
+        p{font-size:8;}
+    </style>
+    <script>
+        function updateClock() {
+            // 現在時刻を取得
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // 1桁の場合は0を付ける
+            if (hours < 10) hours = '0' + hours;
+            if (minutes < 10) minutes = '0' + minutes;
+            if (seconds < 10) seconds = '0' + seconds;
+
+            // 時刻を表示
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').innerHTML = timeString;
+        }
+        // 1秒ごとにupdateClock関数を実行
+        setInterval(updateClock, 1000);
+        // ページ読み込み時に即座に表示
+        window.onload = updateClock;
+    </script>
+</head>
+<body>
+    <h1>現在時刻↓</h1>
+    <div id="clock" style="font-size: 48px; font-weight: bold; color: black;">
+        00:00:00
+    </div>
+    <p>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgW5sph6LvEDDqQuDHGKGbudpkI5nv9o_f2YzdZIT0CbjY9t6_cZ36hb6AWlNstJDO5itvAYNI2EBKypsL46TqjM_F45J-U9ky7kvTH8zej2ZayoSNF_hHGyn9U3lF4kBUe35aV2S2zlZBa/s800/food_hamburger_cheese.png" width=""200 height="200" alt="チーズバーガー">
+    </p>
+    <h1>沖縄だけのバーガーチェーン! A&W</h1>
+    <p>
+        ここでは、沖縄県のおすすめグルメ「A&W」についてご紹介します。
+        <br>
+        「A&W」はアメリカ発祥の老舗ファストフード店ですが、日本では沖縄にしか店舗がありません。そのため、沖縄旅行に行った際にはぜひ立ち寄ってほしい場所の1つです。
+    </P>
+    <h2>なぜ沖縄にしかない？</h2>
+    <p>
+        「A&W」が沖縄にしかないのには、沖縄の歴史が関係しています。
+        <br>
+        第二次世界大戦後、沖縄は約27年アメリカの支配下にありました。「A&W」はその期間中に米軍基地周辺を中心に進出し、アメリカの食文化の一部として定着しました。
+    </p>
+    <h2>おすすめメニュー</h2>
+    <p>
+        「A&W」に行ったらぜひ頼んで欲しいのが「ルートビア」です。ルートビアは炭酸飲料の一種で、こちらも沖縄でしか飲むことが出来ません。
+        <br>
+        独特な風味がするので好みは分かれると思います。私が飲んだ時はイソジンの味にそっくりだなと感じました。なんとおかわり無料なので、気に入った方は心ゆくまで飲むことが出来ます。
+    </p>
+    <h2>米津玄師のロケ地にも！</h2>
+    <p>
+        A&Wの牧港店は、朝ドラ「虎と翼」のOP曲─米津玄師さんの「さよーならまたいつか」のMVロケ地になっています。
+        米津さんファンの方は聖地巡礼に訪れてみてはいかがでしょうか？
+    </p>
+
+
+    <p>いかがだったでしょうか？
+        <br>
+        A&W、沖縄のいたるところにあるので、ぜひ立ち寄ってみてください！！
+    </p>
+    <h2>
+        沖縄旅行のおすすめスポットは
+        <a href="second.html">こちら</a>
+    </h2>
+</body>
+</html>

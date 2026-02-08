@@ -1,13 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"net/http"
+	"time"
+)
+
+func infoHandler(w http.ResponseWriter, r *http.Request) {
+	// 現在時刻取得
+	now := time.Now().Format("15:04:05")
+
+	// ブラウザ情報取得
+	userAgent := r.Header.Get("User-Agent")
+
+	// レスポンス作成
+	message := fmt.Sprintf("今の時刻は %s で，利用しているブラウザは %s ですね", now, userAgent)
+
+	fmt.Fprintln(w, message)
+}
 
 func main() {
-	// Week 04: ここに課題のコードを記述してください
-	// 詳細な課題内容はLMSで確認してください
-	
-	fmt.Println("Week 04 課題")
-	
-	// 以下に実装してください
-	
+	http.HandleFunc("/", infoHandler)
+
+	log.Println("Server started at :8080")
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
+
